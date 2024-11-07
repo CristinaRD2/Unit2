@@ -1,0 +1,45 @@
+body{
+    display: grid;
+    flex-grow: 1;
+    flex: 1;
+}
+header{
+    background-color: rgb(142, 236, 0);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+footer{
+    display: grid;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    
+}
+.container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+aside{
+    background-color: white;
+}
+.item{
+    background-color: rgb(172, 170, 170);
+    width: 200px;
+    height: 200px;
+    border-radius: 2px ;
+    display: grid;
+    align-items: baseline;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+
+}
+main{
+    display: grid;
+    justify-content: space-around;
+    background-color: rgb(172, 170, 170);
+
+}
