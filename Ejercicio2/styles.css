@@ -33,7 +33,7 @@ footer {
     background-color: black;
     color: white;
     padding: 1%;
-    
+
 
 }
 
@@ -80,24 +80,27 @@ aside p {
         margin: 0;
         padding: 0;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: 200px 200px 200px 180px;
         height: 100vh;
         place-items: center;
     }
-main{
-    grid-template-columns: 1fr;
 
-}
+    main {
+        grid-template-columns: 1fr;
+
+    }
+
     footer {
         display: grid;
         margin: 1%;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 30px);
     }
-    aside{
+
+    aside {
         display: grid;
-        margin: 2%;
+        
         padding: 1%;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 20px);
