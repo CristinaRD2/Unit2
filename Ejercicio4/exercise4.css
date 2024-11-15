@@ -6,11 +6,11 @@
     text-align: center;
 }
 
-.header-title {
+.header__title {
     font-size: 2rem;
 }
 
-.header-subtitle {
+.header__subtitle {
     font-size: 1.2rem;
     color: #e0e4e8;
 }
@@ -43,7 +43,7 @@
     color: #FFD700;
 }
 
-.nav__link-active {
+.nav__link--active {
     color: #FFD700;
     text-decoration: underline;
 }
