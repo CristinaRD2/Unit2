@@ -22,33 +22,33 @@
     text-align: center;
 }
 
-.nav-list {
+.nav__list {
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-.nav-item {
+.nav__item {
     margin: 0 1rem;
 }
 
-.nav-link {
+.nav__link {
     color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.nav-link:hover {
+.nav__link:hover {
     color: #FFD700;
 }
 
-.nav-link-active {
+.nav__link-active {
     color: #FFD700;
     text-decoration: underline;
 }
 
-.nav-link-highlight {
+.nav__link--highlight {
     color: lightgray;
     font-weight: bold;
 }
@@ -107,12 +107,12 @@
     padding: 1rem;
 }
 
-.footer-text {
+.footer__text {
     font-size: 1rem;
     color: lightgray;
 }
 
-.footer-text-important {
+.footer__text--important {
     font-weight: bold;
     color: white;
 }
