@@ -41,8 +41,8 @@
     padding: 1rem;
     grid-row: 1;
 
-    nav {
-      ul {
+    nav ul {
+      
         display: flex;
         justify-content: center;
         list-style: none;
@@ -55,15 +55,13 @@
             color: var(--color-white);
             text-decoration: none;
 
-            &:hover,
-            &:focus {
+            :is(:hover, :focus) {
               text-decoration: underline;
               color: var(--color-gray-light);
             }
           }
         }
       }
-    }
   }
 
   .gallery {
@@ -74,13 +72,7 @@
     grid-row: 2;
   }
 
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--color-black);
-    color: var(--color-white);
-    grid-row: 3;
-  }
+  
 }
 
 @layer component {
@@ -92,6 +84,12 @@
     text-align: center;
     box-shadow: 0 2px 4px var(--color-gray-light);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &:hover {
       transform: translateY(-5px);
@@ -107,19 +105,14 @@
       max-width: 100%;
       border-radius: 4px;
     }
-    :is(.title, .description) {
-        margin-bottom: 0.5rem;
-      }
-    /* .title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+
+    &:has(img) {
+      justify-content: flex-start;
     }
 
-    .description {
-      font-size: 1rem;
+    :is(.title, .description) {
       margin-bottom: 0.5rem;
-    } */
-
+    }
     .button {
       margin-top: 1rem;
       padding: 0.5rem 1rem;
@@ -131,30 +124,38 @@
       text-transform: uppercase;
       font-size: 0.9rem;
       transition: background-color 0.3s ease;
-
+      
       &:hover {
         background-color: var(--color-primary-hover);
       }
     }
-    &:has(:not(img)) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--color-black);
+      color: var(--color-white);
+      grid-row: 3;
+    }
+  }
 
-    @container (max-width: 275px) {
+  
+
+  @container (width < 275px) {
+
+    .card{
       .title {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
       }
-
       .description {
-        font-size: 0.9rem;
+        font-size: 0.5rem;
       }
-
-      img {
-        max-width: 80%;
+  
+      .img {
+        max-width: 70%;
+        border-radius: 4px;
       }
     }
   }
+
 }
